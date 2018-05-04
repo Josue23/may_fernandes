@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180504 20:38:36.732" generator="Robot 3.0.4 (Python 2.7.15rc1 on linux2)">
+<suite source="/home/josue/Documents/labs/robot-scripts/may_fernandes/SuiteSiteTestePractice/tests/TestSitePractice.robot" id="s1" name="TestSitePractice">
+<test id="s1-t1" name="Caso de Teste 01: Pesquisar produto existente">
+<kw name="Acessar a página home do site">
+<msg timestamp="20180504 20:38:36.749" level="FAIL">No keyword with name 'Acessar a página home do site' found.</msg>
+<status status="FAIL" endtime="20180504 20:38:36.750" starttime="20180504 20:38:36.749"></status>
+</kw>
+<status status="FAIL" endtime="20180504 20:38:36.750" critical="yes" starttime="20180504 20:38:36.748">No keyword with name 'Acessar a página home do site' found.</status>
+</test>
+<status status="FAIL" endtime="20180504 20:38:36.750" starttime="20180504 20:38:36.733"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="TestSitePractice" pass="0">TestSitePractice</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
