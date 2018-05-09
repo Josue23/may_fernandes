@@ -1,24 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20180504 20:38:36.732" generator="Robot 3.0.4 (Python 2.7.15rc1 on linux2)">
+<robot generated="20180509 20:16:19.933" generator="Robot 3.0.4 (Python 2.7.15rc1 on linux2)">
 <suite source="/home/josue/Documents/labs/robot-scripts/may_fernandes/SuiteSiteTestePractice/tests/TestSitePractice.robot" id="s1" name="TestSitePractice">
 <test id="s1-t1" name="Caso de Teste 01: Pesquisar produto existente">
-<kw name="Acessar a página home do site">
-<msg timestamp="20180504 20:38:36.749" level="FAIL">No keyword with name 'Acessar a página home do site' found.</msg>
-<status status="FAIL" endtime="20180504 20:38:36.750" starttime="20180504 20:38:36.749"></status>
+<kw type="setup" name="Abrir navegador" library="Resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180509 20:16:20.004" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
+<status status="PASS" endtime="20180509 20:16:24.391" starttime="20180509 20:16:20.004"></status>
 </kw>
-<status status="FAIL" endtime="20180504 20:38:36.750" critical="yes" starttime="20180504 20:38:36.748">No keyword with name 'Acessar a página home do site' found.</status>
+<status status="PASS" endtime="20180509 20:16:24.392" starttime="20180509 20:16:20.003"></status>
+</kw>
+<kw name="Acessar a página home do site" library="Resource">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>http://automationpractice.com</arg>
+</arguments>
+<msg timestamp="20180509 20:16:24.392" level="INFO">Opening url 'http://automationpractice.com'</msg>
+<status status="PASS" endtime="20180509 20:16:30.868" starttime="20180509 20:16:24.392"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>My Store</arg>
+</arguments>
+<msg timestamp="20180509 20:16:30.871" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" endtime="20180509 20:16:30.871" starttime="20180509 20:16:30.868"></status>
+</kw>
+<status status="PASS" endtime="20180509 20:16:30.872" starttime="20180509 20:16:24.392"></status>
+</kw>
+<kw name="Digitar o nome de produto &quot;Blouse&quot; no campo de pesquisa" library="Resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=search_query_top</arg>
+<arg>${PRODUTO}</arg>
+</arguments>
+<msg timestamp="20180509 20:16:30.872" level="INFO">Typing text 'Blouse' into text field 'id=search_query_top'.</msg>
+<status status="PASS" endtime="20180509 20:16:30.905" starttime="20180509 20:16:30.872"></status>
+</kw>
+<status status="PASS" endtime="20180509 20:16:30.906" starttime="20180509 20:16:30.872"></status>
+</kw>
+<kw name="Clicar no botão de pesquisar" library="Resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>name=submit_search</arg>
+</arguments>
+<msg timestamp="20180509 20:16:30.906" level="INFO">Clicking element 'name=submit_search'.</msg>
+<status status="PASS" endtime="20180509 20:16:31.894" starttime="20180509 20:16:30.906"></status>
+</kw>
+<status status="PASS" endtime="20180509 20:16:31.894" starttime="20180509 20:16:30.906"></status>
+</kw>
+<kw name="Conferir se o produto &quot;Blouse&quot; foi listado no site" library="Resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Blouse</arg>
+</arguments>
+<msg timestamp="20180509 20:16:31.923" level="INFO">Current page contains text 'Blouse'.</msg>
+<status status="PASS" endtime="20180509 20:16:31.923" starttime="20180509 20:16:31.895"></status>
+</kw>
+<status status="PASS" endtime="20180509 20:16:31.923" starttime="20180509 20:16:31.894"></status>
+</kw>
+<status status="PASS" endtime="20180509 20:16:31.923" critical="yes" starttime="20180509 20:16:20.003"></status>
 </test>
-<status status="FAIL" endtime="20180504 20:38:36.750" starttime="20180504 20:38:36.733"></status>
+<status status="PASS" endtime="20180509 20:16:31.924" starttime="20180509 20:16:19.934"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="TestSitePractice" pass="0">TestSitePractice</stat>
+<stat fail="0" id="s1" name="TestSitePractice" pass="1">TestSitePractice</stat>
 </suite>
 </statistics>
 <errors>
